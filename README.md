@@ -1,19 +1,70 @@
-# React + Vite
+# 🔀 Conditional Rendering — React Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React project demonstrating various techniques for conditionally rendering UI components.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project explores one of the most fundamental patterns in React: rendering different UI elements based on application state or props. It serves as a practical reference for developers learning how to control what gets shown on screen depending on conditions.
 
-## React Compiler
+## What You'll Learn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Rendering components with `if/else` statements
+- Using the ternary operator (`condition ? A : B`) for inline rendering
+- Using the logical `&&` operator for short-circuit rendering
+- Conditionally applying CSS classes
+- Toggling UI elements based on state
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# conditional-rendering
-# conditional-rendering
-# conditional-rendering
+- **React** — UI and state management
+- **Vite** — Development server and build tool
+- **JavaScript / JSX**
+- **CSS**
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iankala/conditional-rendering.git
+   cd conditional-rendering
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at `http://localhost:5173`
+
+## Project Structure
+
+```
+conditional-rendering/
+├── src/            # React components
+├── public/         # Static assets
+├── index.html      # Entry point
+└── vite.config.js  # Vite configuration
+```
+
+## Key Concepts
+
+```jsx
+// Ternary rendering
+{isLoggedIn ? <Dashboard /> : <Login />}
+
+// Short-circuit rendering
+{hasError && <ErrorMessage />}
+
+// if/else in component
+if (loading) return <Spinner />
+return <Content />
+```
+
+## Author
+
+**Ian Kala** — [GitHub](https://github.com/iankala)
